@@ -1,0 +1,181 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: aliceblue;
+    color: midnightblue;
+    scroll-behavior: smooth; /* Enables smooth scrolling */
+}
+
+
+/* Header Styles */
+header {
+    position: fixed;
+    font-family: 'Courier New', Courier, monospace;
+    top: 0;
+    width: 100%;
+    background-color: aliceblue; /* Header with light background */
+    padding: 10px 0;
+    z-index: 1000;
+    box-shadow: 0 4px 2px -2px gray; /* Added shadow for header separation */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: midnightblue; /* Orange links for header */
+    font-weight: bold;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: darkorange; /* Change color on hover */
+}
+
+/* General Section Styles */
+section {
+    height: 100vh; /* Each section takes full viewport height */
+    display: flex;
+    flex-direction: column; /* Stack the content vertically */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    border-bottom: 2px solid navy; /* Orange border for sections */
+    background-color: aliceblue; /* Background for sections */
+}
+
+/* Header (h1, h2) Styles */
+h1, h2 {
+    margin: 0;
+    color: midnightblue; /* Consistent header text color */
+}
+
+#home h1 {
+    display: inline-block;
+    white-space: nowrap;  /* Prevents text from wrapping */
+    overflow: hidden;     /* Hides the overflow (any extra text) */
+    width: max-content;   /* Ensures the width adjusts based on the content */
+}
+
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-align: center; /* Center h2 */
+}
+
+/* Project Styles */
+.project {
+    margin: 20px 0;
+}
+
+.project h3 {
+    font-size: 1.5rem;
+    color: midnightblue;
+}
+
+.project a {
+    color: orange; /* Orange links for project titles */
+    text-decoration: underline;
+}
+
+.project a:hover {
+    color: darkorange; /* Change color on hover */
+}
+
+
+
+#typing-effect {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2em;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 4px solid black; /* Cursor effect */
+    width: 0; /* Start with 0 width for the typing effect */
+    animation: typing 3s steps(40) 1s forwards, blink 0.75s step-end 1;
+}
+
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 30%;
+    }
+}
+
+  
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+  
+
+/* About Me List */
+.about-list {
+    list-style: none;
+    padding: 0;
+}
+
+.about-list .slide-item {
+    opacity: 0; /* Initially invisible */
+    transform: translateX(50px); /* Start from right (off-screen) */
+    animation: slideIn 0.5s ease-out forwards; /* Animation for sliding */
+    margin: 10px 0;
+}
+
+/* Slide-in animation */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(50px); /* Start from the right */
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0); /* End in the normal position */
+    }
+}
+
+/* Delay each list item */
+.about-list .slide-item:nth-child(1) {
+    animation-delay: 0.5s;
+}
+
+.about-list .slide-item:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.about-list .slide-item:nth-child(3) {
+    animation-delay: 1.5s;
+}
+
+.about-list .slide-item:nth-child(4) {
+    animation-delay: 2s;
+}
+
+.about-list .slide-item:nth-child(5) {
+    animation-delay: 2.5s;
+}
+
+
+
+.scrolling-courses {
+    white-space: nowrap;
+    overflow-x: auto;
+    padding: 10px 0;
+}
