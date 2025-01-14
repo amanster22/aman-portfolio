@@ -116,6 +116,7 @@ h2 {
     }
     to {
         width: 50%;
+        max-width: auto;
     }
 }
 
