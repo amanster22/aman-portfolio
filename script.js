@@ -40,5 +40,3 @@ function smoothScrollTo(target, duration) {
     // Start the animation
     requestAnimationFrame(animation);
 }
-
-

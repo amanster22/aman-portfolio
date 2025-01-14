@@ -46,7 +46,8 @@ nav ul li a:hover {
 
 /* General Section Styles */
 section {
-    height: 100vh; /* Each section takes full viewport height */
+    min-height: 100vh; 
+    height: auto;
     display: flex;
     flex-direction: column; /* Stack the content vertically */
     justify-content: center;
@@ -114,7 +115,7 @@ h2 {
         width: 0;
     }
     to {
-        width: 30%;
+        width: 50%;
     }
 }
 
@@ -180,4 +181,14 @@ h2 {
     padding: 10px 0;
 }
 
+
+
+
+/* LinkedIn Icon Styling */
+.linkedin-icon {
+    height: 20px; /* Adjust the height */
+    width: auto;  /* Maintain aspect ratio */
+    margin-right: 10px; /* Space between icon and text */
+    vertical-align: middle; /* Align icon with text */
+}
 
