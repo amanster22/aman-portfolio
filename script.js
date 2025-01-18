@@ -40,3 +40,32 @@ function smoothScrollTo(target, duration) {
     // Start the animation
     requestAnimationFrame(animation);
 }
+
+// Select elements
+const lightbox = document.getElementById('lightbox');
+const lightboxImage = document.getElementById('lightbox-image');
+const lightboxClose = document.getElementById('lightbox-close');
+const triggers = document.querySelectorAll('.lightbox-trigger');
+
+// Open the lightbox when an image is clicked
+triggers.forEach(trigger => {
+    trigger.addEventListener('click', function () {
+        lightbox.style.display = 'flex';
+        lightboxImage.src = this.src;
+    });
+});
+
+// Close the lightbox when the "X" button is clicked
+lightboxClose.addEventListener('click', function () {
+    lightbox.style.display = 'none';
+    lightboxImage.src = ''; // Clear the image source
+});
+
+// Close the lightbox when clicking outside the image
+lightbox.addEventListener('click', function (event) {
+    if (event.target === lightbox) {
+        lightbox.style.display = 'none';
+        lightboxImage.src = '';
+    }
+});
+
