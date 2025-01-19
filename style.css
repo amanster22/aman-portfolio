@@ -91,13 +91,52 @@ section {
 }
 
 
-.container {
-    display: grid;
+/* .container {
+    display: flex;
     align-items: center; 
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 5px;
-   }
-   
+   } */
+   .container {
+    display: flex;
+    align-items: center;
+    overflow: visible; /* Hide overflowing content */
+    white-space: nowrap; /* Prevent wrapping */
+    width: 100%; /* Full width of the container */
+    height: 200px; /* Adjust height based on content */
+    position: relative; /* For absolute positioning inside */
+    animation: scroll 20s linear infinite; /* Apply auto-scrolling animation */
+    }
+
+    .container img {
+        margin-right: 20px; /* Space between images */
+    }
+
+    .scroll-container {
+        width: 100%; /* Full width */
+        overflow: hidden; /* Hide overflow content */
+        white-space: nowrap; /* Prevent line breaks */
+        position: relative; /* Ensure proper positioning */
+    }
+    
+    .scroll-content {
+        display: inline-block; /* Keep content in one row */
+        animation: scroll 10s linear infinite; /* Infinite scrolling animation */
+    }
+    
+    .scroll-content img {
+        display: inline-block;
+        margin: 0 10px; /* Optional spacing between items */
+    }
+    
+    @keyframes scroll {
+        from {
+            transform: translateX(0); /* Start at the beginning */
+        }
+        to {
+            transform: translateX(-100%); /* Scroll to the end */
+        }
+    }
    
    .description {
      font-size: 20px;
