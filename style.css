@@ -90,6 +90,28 @@ section {
     background-color: aliceblue; /* Background for sections */
 }
 
+
+.container {
+    display: grid;
+    align-items: center; 
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 5px;
+   }
+   
+   
+   .description {
+     font-size: 20px;
+   }
+
+   .image-item img {
+    max-width: 50%; /* Increase this value for larger images */
+    
+    display: block;
+    cursor: pointer;
+    margin: 10px auto; /* Optional: centers the image */
+    border-radius: 10px; /* Optional: adds rounded corners */
+}
+
 /* Header (h1, h2) Styles */
 h1, h2 {
     margin: 0;
