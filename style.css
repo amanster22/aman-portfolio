@@ -138,18 +138,30 @@ section {
         }
     }
    
-   .description {
-     font-size: 20px;
-   }
-
-   .image-item img {
-    max-width: 50%; /* Increase this value for larger images */
+    .image-container {
+        display: flex;
+        flex-wrap: wrap; /* Ensures the images wrap to the next line if there's no space */
+        justify-content: center; /* Centers the images horizontally */
+        gap: 20px; /* Adds space between the images */
+    }
     
-    display: block;
-    cursor: pointer;
-    margin: 10px auto; /* Optional: centers the image */
-    border-radius: 10px; /* Optional: adds rounded corners */
-}
+    .image-item {
+        flex: 1 1 auto; /* Allows items to grow and shrink */
+        max-width: 300px; /* Sets a maximum width for each image */
+        text-align: center; /* Centers the description text */
+    }
+    
+    .image-item img {
+        width: 100%; /* Makes the images responsive */
+        height: auto; /* Maintains aspect ratio */
+        display: block; /* Prevents inline gap under images */
+    }
+    
+    .description {
+        margin-top: 10px;
+        font-size: 14px;
+        color: #555; /* Adjust color to match your theme */
+    }
 
 /* Header (h1, h2) Styles */
 h1, h2 {
