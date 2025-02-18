@@ -5,10 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Custom CSS for glow effect and animations */
+        .nav-link {
+            transition: all 0.3s ease-in-out;
+        }
+        .nav-link:hover {
+            text-shadow: 0 0 8px rgba(59, 130, 246, 0.8);
+            transform: translateY(-2px);
+        }
+        /* Add a subtle shadow to the navigation bar */
+        header {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        /* Dark mode theme */
+        body.dark {
+            background-color: #0a192f; /* Navy blue */
+            color: #ccd6f6; /* Light gray */
+        }
+        .dark header {
+            background-color: #112240; /* Darker navy */
+        }
+        .dark .collapsible {
+            background-color: #233554; /* Dark navy */
+            color: #ccd6f6;
+        }
+        .dark .collapsible:hover {
+            background-color: #1f4068; /* Slightly lighter navy */
+        }
+        .dark .content {
+            background-color: #1f4068; /* Dark navy */
+            color: #ccd6f6;
+        }
+        .dark .contact-info svg {
+            fill: #ccd6f6; /* Light gray for icons */
+        }
+        /* Fade-in animation */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .animate-fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+    </style>
 </head>
-<body class="bg-gray-100 text-gray-800">
-    <header class="bg-blue-600 text-white p-4">
+<body class="bg-gray-100 text-gray-800 dark:bg-navy-900 dark:text-light-gray">
+    <header class="bg-blue-600 text-white p-4 dark:bg-navy-800">
         <nav>
             <ul class="flex space-x-4">
                 <li><a href="#home" class="nav-link hover:text-blue-300">Home</a></li>
@@ -20,7 +63,7 @@
     </header>
 
     <section id="home" class="p-8">
-        <h1 id="typing-effect" class="text-4xl font-bold">👋 Hello, I'm Aman </h1> 
+        <h1 class="text-4xl font-bold animate-fade-in">👋 Hello, I'm Aman</h1>
         <p class="text-xl mt-2">Welcome to my portfolio!</p>
     </section>
 
@@ -28,14 +71,14 @@
         <h2 class="text-3xl font-bold mb-4">Projects</h2>
         <ul class="space-y-4">
             <li>
-                <button class="collapsible w-full text-left p-4 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 hover:shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105">
+                <button class="collapsible w-full text-left p-4 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 hover:shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105 dark:bg-navy-700 dark:hover:bg-navy-600">
                     PlayerGaugeAI
                 </button>
-                <div class="content bg-gray-200 p-4 rounded-b-lg mt-2 hidden">
+                <div class="content bg-gray-200 p-4 rounded-b-lg mt-2 hidden dark:bg-navy-600">
                     <p><strong>Dec 2024 – Present</strong><br>
                     AI Chatbot-driven platform for analyzing NBA player performance.<br>
                     Designed a Python application to scrape NBA player stats, store data in PostgreSQL, and build a salary prediction model using Random Forests to evaluate player performance relative to contracts. Developing a dashboard to visualize trends using Pandas, Matplotlib, and HTML.</p>
-                    <a href="https://github.com/amanster22/PlayerGaugeAI" target="_blank" class="text-blue-600 hover:underline">View Project</a>
+                    <a href="https://github.com/amanster22/PlayerGaugeAI" target="_blank" class="text-blue-600 hover:underline dark:text-blue-300">View Project</a>
                     <h3 class="font-bold mt-2">IN DEVELOPMENT</h3>
                     <div class="image-container flex space-x-4 mt-4">
                         <div class="image-item">
@@ -50,10 +93,10 @@
                 </div>
             </li>
             <li>
-                <button class="collapsible w-full text-left p-4 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 hover:shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105">
+                <button class="collapsible w-full text-left p-4 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 hover:shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105 dark:bg-navy-700 dark:hover:bg-navy-600">
                     StepUp
                 </button>
-                <div class="content bg-gray-200 p-4 rounded-b-lg mt-2 hidden">
+                <div class="content bg-gray-200 p-4 rounded-b-lg mt-2 hidden dark:bg-navy-600">
                     <p><strong>May 2023 – Present</strong><br>
                         Revolutionizing personal styling with a fashion dilemma iOS app built in SwiftUI.<br>
                         Developed an AI-powered app that curates outfits based on shoes, user preferences, weather, and occasions. Implemented interactive features for personalized suggestions and added an Explore page to highlight trending fashion and promote sustainable wardrobe choices.
@@ -72,17 +115,17 @@
                             <div class="description text-center mt-2">Shoe-Based Styling</div>
                         </div>
                     </div>
-                    <a href="https://github.com/amanster22/KickStarter" target="_blank" class="text-blue-600 hover:underline">View Project</a>
+                    <a href="https://github.com/amanster22/KickStarter" target="_blank" class="text-blue-600 hover:underline dark:text-blue-300">View Project</a>
                 </div>
             </li>
             <li>
-                <button class="collapsible w-full text-left p-4 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 hover:shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105">
+                <button class="collapsible w-full text-left p-4 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 hover:shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105 dark:bg-navy-700 dark:hover:bg-navy-600">
                     EmbRACE & Edith (Continuation Project)
                 </button>
-                <div class="content bg-gray-200 p-4 rounded-b-lg mt-2 hidden">
+                <div class="content bg-gray-200 p-4 rounded-b-lg mt-2 hidden dark:bg-navy-600">
                     <p><strong>Dec 2020 – Dec 2022</strong><br>
                     Developed AI models to detect unconscious bias and respond to cyberbullying on social networks. Adapted a movie review sentiment analysis model to assess and address user sentiment in online interactions. Conducted data analysis and trained machine learning models using Python and Google Colab. Awards from Johnson & Johnson for Behavioral Sciences (EmbRACE) and the American Psychological Association (Edith).</p>
-                    <a href="https://github.com/amanster904/EmbRACE" target="_blank" class="text-blue-600 hover:underline">View Project</a>
+                    <a href="https://github.com/amanster904/EmbRACE" target="_blank" class="text-blue-600 hover:underline dark:text-blue-300">View Project</a>
                 </div>
             </li>
         </ul>
@@ -99,15 +142,16 @@
         </div>
         <h3 class="text-2xl font-bold mt-4">Technical Skills</h3>
         <p>Python, Java, R, C, SQL, JavaScript, SwiftUI, HTML/CSS, Git, Google Cloud Platform, Excel</p>
-        <div class="container flex flex-wrap gap-4 mt-4">
-            <img src="assets/pythonLogo.svg" height="80">
-            <img src="assets/javaLogo.png" height="80">
-            <img src="assets/cLogo.png" height="80">
-            <img src="assets/sqlLogo.png" height="80">
-            <img src="assets/rLogo.png" height="80">
-            <img src="assets/htmlLogo.png" height="80">
-            <img src="assets/excelLogo.png" height="80">
-            <img src="assets/powerpointLogo.png" height="80">
+        <!-- Grid layout for logos -->
+        <div class="grid grid-cols-4 gap-4 mt-4">
+            <img src="assets/pythonLogo.svg" class="w-20 h-20 object-contain">
+            <img src="assets/javaLogo.png" class="w-20 h-20 object-contain">
+            <img src="assets/cLogo.png" class="w-20 h-20 object-contain">
+            <img src="assets/sqlLogo.png" class="w-20 h-20 object-contain">
+            <img src="assets/rLogo.png" class="w-20 h-20 object-contain">
+            <img src="assets/htmlLogo.png" class="w-20 h-20 object-contain">
+            <img src="assets/excelLogo.png" class="w-20 h-20 object-contain">
+            <img src="assets/powerpointLogo.png" class="w-20 h-20 object-contain">
         </div>
     </section>
 
@@ -117,7 +161,7 @@
         <ul class="flex space-x-4 mt-4">
             <div class="contact-info flex space-x-4">
                 <a href="mailto:aman.shaik@emory.edu" target="_blank">
-                    <svg fill="#000000" height="50px" width="50px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 75.294 75.294" xml:space="preserve" stroke="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M66.097,12.089h-56.9C4.126,12.089,0,16.215,0,21.286v32.722c0,5.071,4.126,9.197,9.197,9.197h56.9 c5.071,0,9.197-4.126,9.197-9.197V21.287C75.295,16.215,71.169,12.089,66.097,12.089z M61.603,18.089L37.647,33.523L13.691,18.089 H61.603z M66.097,57.206h-56.9C7.434,57.206,6,55.771,6,54.009V21.457l29.796,19.16c0.04,0.025,0.083,0.042,0.124,0.065 c0.043,0.024,0.087,0.047,0.131,0.069c0.231,0.119,0.469,0.215,0.712,0.278c0.025,0.007,0.05,0.01,0.075,0.016 c0.267,0.063,0.537,0.102,0.807,0.102c0.001,0,0.002,0,0.002,0c0.002,0,0.003,0,0.004,0c0.27,0,0.54-0.038,0.807-0.102 c0.025-0.006,0.05-0.009,0.075-0.016c0.243-0.063,0.48-0.159,0.712-0.278c0.044-0.022,0.088-0.045,0.131-0.069 c0.041-0.023,0.084-0.04,0.124-0.065l29.796-19.16v32.551C69.295,55.771,67.86,57.206,66.097,57.206z"></path> </g> </g></svg>
+                    <svg fill="currentColor" height="50px" width="50px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 75.294 75.294" xml:space="preserve" stroke="currentColor"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M66.097,12.089h-56.9C4.126,12.089,0,16.215,0,21.286v32.722c0,5.071,4.126,9.197,9.197,9.197h56.9 c5.071,0,9.197-4.126,9.197-9.197V21.287C75.295,16.215,71.169,12.089,66.097,12.089z M61.603,18.089L37.647,33.523L13.691,18.089 H61.603z M66.097,57.206h-56.9C7.434,57.206,6,55.771,6,54.009V21.457l29.796,19.16c0.04,0.025,0.083,0.042,0.124,0.065 c0.043,0.024,0.087,0.047,0.131,0.069c0.231,0.119,0.469,0.215,0.712,0.278c0.025,0.007,0.05,0.01,0.075,0.016 c0.267,0.063,0.537,0.102,0.807,0.102c0.001,0,0.002,0,0.002,0c0.002,0,0.003,0,0.004,0c0.27,0,0.54-0.038,0.807-0.102 c0.025-0.006,0.05-0.009,0.075-0.016c0.243-0.063,0.48-0.159,0.712-0.278c0.044-0.022,0.088-0.045,0.131-0.069 c0.041-0.023,0.084-0.04,0.124-0.065l29.796-19.16v32.551C69.295,55.771,67.86,57.206,66.097,57.206z"></path> </g> </g></svg>
                 </a>
                 <a href="https://www.linkedin.com/in/aman-shaik-a91081227" target="_blank">
                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 50 50">
@@ -129,6 +173,7 @@
     </section>
 
     <script>
+        // Collapsible functionality
         var coll = document.getElementsByClassName("collapsible");
         for (var i = 0; i < coll.length; i++) {
             coll[i].addEventListener("click", function() {
@@ -141,6 +186,16 @@
                 }
             });
         }
+
+        // Dark mode toggle
+        const darkModeToggle = document.createElement('button');
+        darkModeToggle.innerText = '🌙';
+        darkModeToggle.className = 'fixed bottom-4 right-4 p-3 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition-all';
+        darkModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark');
+            darkModeToggle.innerText = document.body.classList.contains('dark') ? '☀️' : '🌙';
+        });
+        document.body.appendChild(darkModeToggle);
     </script>
 </body>
 </html>
