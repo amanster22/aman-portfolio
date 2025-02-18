@@ -4,165 +4,130 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header>
+<body class="bg-gray-100 text-gray-800">
+    <header class="bg-blue-600 text-white p-4">
         <nav>
-            <ul>
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#about" class="nav-link">About Me</a></li>
-                <li><a href="#contact" class="nav-link">Contact Me</a></li>
+            <ul class="flex space-x-4">
+                <li><a href="#home" class="nav-link hover:text-blue-300">Home</a></li>
+                <li><a href="#projects" class="nav-link hover:text-blue-300">Projects</a></li>
+                <li><a href="#about" class="nav-link hover:text-blue-300">About Me</a></li>
+                <li><a href="#contact" class="nav-link hover:text-blue-300">Contact Me</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="home">
-        <h1 id="typing-effect">👋 Hello, I'm Aman </h1> 
-        <p>Welcome to my portfolio!</p>
-
+    <section id="home" class="p-8">
+        <h1 id="typing-effect" class="text-4xl font-bold">👋 Hello, I'm Aman </h1> 
+        <p class="text-xl mt-2">Welcome to my portfolio!</p>
     </section>
 
-    
-
-    <section id="projects">
-        <h2>Projects</h2>
-        <ul>
+    <section id="projects" class="p-8">
+        <h2 class="text-3xl font-bold mb-4">Projects</h2>
+        <ul class="space-y-4">
             <li>
-                <button class="collapsible">PlayerGaugeAI</button>
-                <div class="content">
+                <button class="collapsible w-full text-left p-4 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 hover:shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105">
+                    PlayerGaugeAI
+                </button>
+                <div class="content bg-gray-200 p-4 rounded-b-lg mt-2 hidden">
                     <p><strong>Dec 2024 – Present</strong><br>
                     AI Chatbot-driven platform for analyzing NBA player performance.<br>
                     Designed a Python application to scrape NBA player stats, store data in PostgreSQL, and build a salary prediction model using Random Forests to evaluate player performance relative to contracts. Developing a dashboard to visualize trends using Pandas, Matplotlib, and HTML.</p>
-                    <a href="https://github.com/amanster22/PlayerGaugeAI" target="_blank">View Project</a>
-                    <H3>IN DEVELOPMENT</H3>
-                    <div class="image-container">
-                        
-                        <!-- <div class = "container"> -->
-                            <div class="image-item">
-                                <img src="assets/playerTable.png" class="lightbox-trigger" />
-                                <div class="description">Player Dashboard with Performance/Salary Prediction</div>
-                            </div>
-                            <div class="image-item">
-                                <img src="assets/playerLegendPlot.png" class="lightbox-trigger"/>
-                                <div class="description">Player Performance Classification Legend</div>
-                            </div>
-                        <!-- </div> -->
+                    <a href="https://github.com/amanster22/PlayerGaugeAI" target="_blank" class="text-blue-600 hover:underline">View Project</a>
+                    <h3 class="font-bold mt-2">IN DEVELOPMENT</h3>
+                    <div class="image-container flex space-x-4 mt-4">
+                        <div class="image-item">
+                            <img src="assets/playerTable.png" class="lightbox-trigger w-full h-auto rounded-lg shadow-md" />
+                            <div class="description text-center mt-2">Player Dashboard with Performance/Salary Prediction</div>
+                        </div>
+                        <div class="image-item">
+                            <img src="assets/playerLegendPlot.png" class="lightbox-trigger w-full h-auto rounded-lg shadow-md"/>
+                            <div class="description text-center mt-2">Player Performance Classification Legend</div>
+                        </div>
                     </div>
                 </div>
-
-                
-                
             </li>
             <li>
-                <button class="collapsible">StepUp</button>
-                <div class="content">
+                <button class="collapsible w-full text-left p-4 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 hover:shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105">
+                    StepUp
+                </button>
+                <div class="content bg-gray-200 p-4 rounded-b-lg mt-2 hidden">
                     <p><strong>May 2023 – Present</strong><br>
                         Revolutionizing personal styling with a fashion dilemma iOS app built in SwiftUI.<br>
                         Developed an AI-powered app that curates outfits based on shoes, user preferences, weather, and occasions. Implemented interactive features for personalized suggestions and added an Explore page to highlight trending fashion and promote sustainable wardrobe choices.
                     </p>
-                    
-                    <div class="image-container">
-                        <!-- <div class = "container"> -->
-                            <div class="image-item">
-                                <img src="assets/final.gif" alt="StepUp App Demo" class="lightbox-trigger" />
-                                <div class="description">User Preferences Styling</div>
-                            </div>
-                            <div class="image-item">
-                                <img src="assets/occassion.gif" alt="StepUp App Demo" class="lightbox-trigger"/>
-                                <div class="description">Occasion-Based Styling</div>
-                            </div>
-                            <div class="image-item">
-                                <img src="assets/shoes.gif" alt="StepUp App Demo" class="lightbox-trigger"  />
-                                <div class="description">Shoe-Based Styling</div>
-                            </div>
-                        <!-- </div> -->
+                    <div class="image-container flex space-x-4 mt-4">
+                        <div class="image-item">
+                            <img src="assets/final.gif" alt="StepUp App Demo" class="lightbox-trigger w-full h-auto rounded-lg shadow-md" />
+                            <div class="description text-center mt-2">User Preferences Styling</div>
+                        </div>
+                        <div class="image-item">
+                            <img src="assets/occassion.gif" alt="StepUp App Demo" class="lightbox-trigger w-full h-auto rounded-lg shadow-md"/>
+                            <div class="description text-center mt-2">Occasion-Based Styling</div>
+                        </div>
+                        <div class="image-item">
+                            <img src="assets/shoes.gif" alt="StepUp App Demo" class="lightbox-trigger w-full h-auto rounded-lg shadow-md"  />
+                            <div class="description text-center mt-2">Shoe-Based Styling</div>
+                        </div>
                     </div>
-                    
-                    <a href="https://github.com/amanster22/KickStarter" target="_blank">View Project</a>
-                    
+                    <a href="https://github.com/amanster22/KickStarter" target="_blank" class="text-blue-600 hover:underline">View Project</a>
                 </div>
             </li>
-            
-            <div class="lightbox" id="lightbox">
-                <button class="close-btn" id="lightbox-close">X</button>
-                <img src="" alt="Large View" id="lightbox-image" />
-            </div>
             <li>
-                <button class="collapsible">EmbRACE & Edith (Continuation Project)</button>
-                <div class="content">
+                <button class="collapsible w-full text-left p-4 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 hover:shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105">
+                    EmbRACE & Edith (Continuation Project)
+                </button>
+                <div class="content bg-gray-200 p-4 rounded-b-lg mt-2 hidden">
                     <p><strong>Dec 2020 – Dec 2022</strong><br>
                     Developed AI models to detect unconscious bias and respond to cyberbullying on social networks. Adapted a movie review sentiment analysis model to assess and address user sentiment in online interactions. Conducted data analysis and trained machine learning models using Python and Google Colab. Awards from Johnson & Johnson for Behavioral Sciences (EmbRACE) and the American Psychological Association (Edith).</p>
-                    <a href="https://github.com/amanster904/EmbRACE" target="_blank">View Project</a>
+                    <a href="https://github.com/amanster904/EmbRACE" target="_blank" class="text-blue-600 hover:underline">View Project</a>
                 </div>
-                
             </li>
         </ul>
     </section>
 
-    <section id="about">
-        <h2>About Me</h2>
-    
-        <h3>EDUCATION</h3>
+    <section id="about" class="p-8">
+        <h2 class="text-3xl font-bold mb-4">About Me</h2>
+        <h3 class="text-2xl font-bold mt-4">EDUCATION</h3>
         <p><strong>Emory University</strong> – Atlanta, GA<br>
            B.S., Quantitative Sciences (Informatics, AI) – May 2026</p>
-    
-        <h3>Relevant Coursework</h3>
-        <div>
+        <h3 class="text-2xl font-bold mt-4">Relevant Coursework</h3>
+        <div class="text-lg">
             📊 Data Structures, 📈 Probability & Stats, 🤖 Machine Learning, 🧠 AI, 🔢 Regression, 💻 Data Analytics, 🗃️ DB Systems, 📐 Linear Algebra
         </div>
-    
-        <h3>Technical Skills</h3>
+        <h3 class="text-2xl font-bold mt-4">Technical Skills</h3>
         <p>Python, Java, R, C, SQL, JavaScript, SwiftUI, HTML/CSS, Git, Google Cloud Platform, Excel</p>
-        <div class="container">
-            
-            <img src="assets/pythonLogo.svg" height = "80">
-            <img src="assets/javaLogo.png" height = "80" >
-            <img src="assets/cLogo.png" height = "80">
-            <img src="assets/sqlLogo.png" height = "80">
-            <img src="assets/rLogo.png" height = "80">
-            <img src="assets/htmlLogo.png" height = "80">
-            <img src="assets/excelLogo.png" height = "80">
-            <img src="assets/powerpointLogo.png" height = "80">
-
-            <img src="assets/pythonLogo.svg" height = "80">
-            <img src="assets/javaLogo.png" height = "80" >
-            <img src="assets/cLogo.png" height = "80">
-            <img src="assets/sqlLogo.png" height = "80">
-            <img src="assets/rLogo.png" height = "80">
-            <img src="assets/htmlLogo.png" height = "80">
-            <img src="assets/excelLogo.png" height = "80">
-            <img src="assets/powerpointLogo.png" height = "80">
+        <div class="container flex flex-wrap gap-4 mt-4">
+            <img src="assets/pythonLogo.svg" height="80">
+            <img src="assets/javaLogo.png" height="80">
+            <img src="assets/cLogo.png" height="80">
+            <img src="assets/sqlLogo.png" height="80">
+            <img src="assets/rLogo.png" height="80">
+            <img src="assets/htmlLogo.png" height="80">
+            <img src="assets/excelLogo.png" height="80">
+            <img src="assets/powerpointLogo.png" height="80">
         </div>
     </section>
-    
-    
-    
-    <style>
-        .collapsible {
-            background-color: #007bff;
-            color: white;
-            cursor: pointer;
-            padding: 10px;
-            width: 100%;
-            text-align: left;
-            border: none;
-            outline: none;
-            font-size: 16px;
-        }
-        .collapsible:hover {
-            background-color: #0056b3;
-        }
-        .content {
-            padding: 10px;
-            display: none;
-            background-color: #f1f1f1;
-            margin-top: 5px;
-            border-left: 3px solid #007bff;
-        }
-    </style>
-    
+
+    <section id="contact" class="p-8">
+        <h2 class="text-3xl font-bold mb-4">Contact Me</h2>
+        <p>You can reach me via the following:</p>
+        <ul class="flex space-x-4 mt-4">
+            <div class="contact-info flex space-x-4">
+                <a href="mailto:aman.shaik@emory.edu" target="_blank">
+                    <svg fill="#000000" height="50px" width="50px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 75.294 75.294" xml:space="preserve" stroke="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M66.097,12.089h-56.9C4.126,12.089,0,16.215,0,21.286v32.722c0,5.071,4.126,9.197,9.197,9.197h56.9 c5.071,0,9.197-4.126,9.197-9.197V21.287C75.295,16.215,71.169,12.089,66.097,12.089z M61.603,18.089L37.647,33.523L13.691,18.089 H61.603z M66.097,57.206h-56.9C7.434,57.206,6,55.771,6,54.009V21.457l29.796,19.16c0.04,0.025,0.083,0.042,0.124,0.065 c0.043,0.024,0.087,0.047,0.131,0.069c0.231,0.119,0.469,0.215,0.712,0.278c0.025,0.007,0.05,0.01,0.075,0.016 c0.267,0.063,0.537,0.102,0.807,0.102c0.001,0,0.002,0,0.002,0c0.002,0,0.003,0,0.004,0c0.27,0,0.54-0.038,0.807-0.102 c0.025-0.006,0.05-0.009,0.075-0.016c0.243-0.063,0.48-0.159,0.712-0.278c0.044-0.022,0.088-0.045,0.131-0.069 c0.041-0.023,0.084-0.04,0.124-0.065l29.796-19.16v32.551C69.295,55.771,67.86,57.206,66.097,57.206z"></path> </g> </g></svg>
+                </a>
+                <a href="https://www.linkedin.com/in/aman-shaik-a91081227" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 50 50">
+                        <path d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M17,20v19h-6V20H17z M11,14.47c0-1.4,1.2-2.47,3-2.47s2.93,1.07,3,2.47c0,1.4-1.12,2.53-3,2.53C12.2,17,11,15.87,11,14.47z M39,39h-6c0,0,0-9.26,0-10 c0-2-1-4-3.5-4.04h-0.08C27,24.96,26,27.02,26,29c0,0.91,0,10,0,10h-6V20h6v2.56c0,0,1.93-2.56,5.81-2.56 c3.97,0,7.19,2.73,7.19,8.26V39z"></path>
+                    </svg>
+                </a>
+            </div>
+        </ul>
+    </section>
+
     <script>
         var coll = document.getElementsByClassName("collapsible");
         for (var i = 0; i < coll.length; i++) {
@@ -177,27 +142,5 @@
             });
         }
     </script>
-
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>You can reach me via the following:</p>
-        <ul>
-            <div class="contact-info">
-                <a href="mailto:aman.shaik@emory.edu" target="_blank">
-                    <svg fill="#000000" height="100px" width="100px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 75.294 75.294" xml:space="preserve" stroke="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M66.097,12.089h-56.9C4.126,12.089,0,16.215,0,21.286v32.722c0,5.071,4.126,9.197,9.197,9.197h56.9 c5.071,0,9.197-4.126,9.197-9.197V21.287C75.295,16.215,71.169,12.089,66.097,12.089z M61.603,18.089L37.647,33.523L13.691,18.089 H61.603z M66.097,57.206h-56.9C7.434,57.206,6,55.771,6,54.009V21.457l29.796,19.16c0.04,0.025,0.083,0.042,0.124,0.065 c0.043,0.024,0.087,0.047,0.131,0.069c0.231,0.119,0.469,0.215,0.712,0.278c0.025,0.007,0.05,0.01,0.075,0.016 c0.267,0.063,0.537,0.102,0.807,0.102c0.001,0,0.002,0,0.002,0c0.002,0,0.003,0,0.004,0c0.27,0,0.54-0.038,0.807-0.102 c0.025-0.006,0.05-0.009,0.075-0.016c0.243-0.063,0.48-0.159,0.712-0.278c0.044-0.022,0.088-0.045,0.131-0.069 c0.041-0.023,0.084-0.04,0.124-0.065l29.796-19.16v32.551C69.295,55.771,67.86,57.206,66.097,57.206z"></path> </g> </g></svg>
-                </a>
-            
-
-                <a href="https://www.linkedin.com/in/aman-shaik-a91081227" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50">
-                        <path d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M17,20v19h-6V20H17z M11,14.47c0-1.4,1.2-2.47,3-2.47s2.93,1.07,3,2.47c0,1.4-1.12,2.53-3,2.53C12.2,17,11,15.87,11,14.47z M39,39h-6c0,0,0-9.26,0-10 c0-2-1-4-3.5-4.04h-0.08C27,24.96,26,27.02,26,29c0,0.91,0,10,0,10h-6V20h6v2.56c0,0,1.93-2.56,5.81-2.56 c3.97,0,7.19,2.73,7.19,8.26V39z"></path>
-                    </svg>
-                </a>
-            </div>
-        
-        </ul>
-    </section>
-
-    <script src="script.js"></script>
 </body>
 </html>
