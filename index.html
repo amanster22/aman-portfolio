@@ -105,13 +105,30 @@
                     class="collapsible w-full text-left p-4 bg-purple-600 text-white rounded-lg shadow-md hover:bg-purple-700 hover:shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105 dark:bg-navy-700 dark:hover:bg-navy-600">
                     PlayerGaugeAI
                 </button>
+                <button class="expand-btn mt-2 p-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition">
+                    Expand Here
+                </button>
+
                 <div class="content bg-gray-200 p-4 rounded-b-lg mt-2 hidden dark:bg-navy-600">
                     <p><strong>Dec 2024 – Present</strong><br>
-                        NBA Player Evaluator is a comprehensive, data-driven platform designed to deliver holistic insights into NBA player economics. At its core, the system leverages a robust XGBoost model trained on historical performance statistics to forecast player salaries. This quantitative engine is augmented by a Hybrid RAG architecture (Retrieval-Augmented Generation) that ingests unstructured qualitative data—such as analyst reports and scouting narratives—via a FAISS vector store.
+                        PlayerGaugeAI is a comprehensive, data-driven platform designed to deliver holistic insights
+                        into NBA player economics. At its core, the system leverages a robust XGBoost model trained on
+                        historical performance statistics to forecast player salaries. This quantitative engine is
+                        augmented by a Hybrid RAG architecture (Retrieval-Augmented Generation) that ingests
+                        unstructured qualitative data—such as analyst reports and scouting narratives—via a FAISS vector
+                        store.
 
-                        The system features an intelligent Agentic Orchestration layer built with LangChain, which dynamically routes user queries between a PostgreSQL database (for statistical precision) and the vector store (for contextual nuance). This allows the platform to reconcile mathematical model outputs with human expert consensus, automatically identifying market anomalies and explaining value discrepancies.
+                        The system features an intelligent Agentic Orchestration layer built with LangChain, which
+                        dynamically routes user queries between a PostgreSQL database (for statistical precision) and
+                        the vector store (for contextual nuance). This allows the platform to reconcile mathematical
+                        model outputs with human expert consensus, automatically identifying market anomalies and
+                        explaining value discrepancies.
 
-                        Engineered as a production-ready full-stack solution, the application is containerized with Docker and powered by a Flask backend. The frontend, built with React.js and styled with Tailwind CSS, delivers dynamic Plotly visualizations and an interactive chatbot, enabling users to explore real-time undervaluation metrics backed by both quantitative forecasts and retrieved qualitative evidence.
+                        Engineered as a production-ready full-stack solution, the application is containerized with
+                        Docker and powered by a Flask backend. The frontend, built with React.js and styled with
+                        Tailwind CSS, delivers dynamic Plotly visualizations and an interactive chatbot, enabling users
+                        to explore real-time undervaluation metrics backed by both quantitative forecasts and retrieved
+                        qualitative evidence.
                         <a href="https://github.com/amanster22/PlayerGaugeAI" target="_blank"
                             class="text-blue-600 hover:underline dark:text-blue-300">View Project</a>
                     <h3 class="font-bold mt-2">IN DEVELOPMENT</h3>
